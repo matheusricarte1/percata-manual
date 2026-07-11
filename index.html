@@ -141,6 +141,8 @@ main { min-width: 0; background: var(--paper); }
 
 .normative-story { height: 360vh; margin: 0 -1px; }.normative-sticky { position: sticky; top: 74px; display: flex; flex-direction: column; justify-content: center; min-height: min(620px, calc(100vh - 98px)); }.normative-shell { width: 100%; }.normative-viewport { overflow: hidden; padding: 22px 0 26px; background: linear-gradient(180deg, #fbfdfd, #f5fafb); }.normative-track { display: flex; align-items: stretch; gap: 12px; width: max-content; padding: 0 23px; will-change: transform; }.normative-card { position: relative; display: flex; flex: 0 0 270px; flex-direction: column; min-height: 242px; padding: 19px; border: 1px solid #d4e1e5; border-radius: 15px; background: white; box-shadow: 0 9px 20px rgb(13 53 82 / 7%); opacity: .55; transform: translateY(11px); transition: opacity .25s ease, transform .35s ease, border-color .25s ease, box-shadow .25s ease; }.normative-card::after { content: ""; position: absolute; top: 38px; right: -13px; width: 13px; height: 2px; background: #b7cdd3; }.normative-card:last-child::after { display: none; }.normative-card.active { border-color: var(--percata-teal); box-shadow: 0 15px 28px rgb(11 122 117 / 14%); opacity: 1; transform: translateY(0); }.normative-card-number { display: grid; place-items: center; width: 31px; height: 31px; margin-bottom: 13px; border-radius: 9px; color: white; background: var(--percata-deep); font-size: 10px; font-weight: 900; }.normative-card.active .normative-card-number { background: var(--percata-teal); }.normative-card-route { color: var(--percata-teal); font-size: 9px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }.normative-card h4 { min-height: 45px; margin: 5px 0 9px; color: var(--percata-deep); font-size: 17px; line-height: 1.18; }.normative-card p { margin: 0; color: var(--percata-muted); font-size: 11px; line-height: 1.4; }.normative-card-footer { display: flex; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 13px; border-top: 1px solid #e8eef0; }.normative-card-footer b, .normative-card-footer span { color: var(--percata-deep); font-size: 9px; line-height: 1.2; }.normative-card-footer span { color: var(--percata-muted); text-align: right; }.normative-caption { display: flex; align-items: baseline; gap: 10px; min-height: 52px; padding: 14px 18px; border-top: 1px solid #e3ebed; background: white; }.normative-caption span { color: var(--percata-teal); font-size: 9px; font-weight: 900; letter-spacing: .08em; }.normative-caption strong { color: var(--percata-deep); font-size: 14px; }.normative-caption em { margin-left: auto; color: var(--percata-muted); font-size: 10px; font-style: normal; }.normative-scroll-hint { display: block; align-self: center; margin-top: 11px; color: var(--percata-muted); font-size: 10px; font-weight: 800; letter-spacing: .04em; }.normative-scroll-hint i { display: inline-block; margin-left: 4px; color: var(--percata-teal); font-size: 16px; font-style: normal; animation: scroll-hint 1.3s ease-in-out infinite; }
 
+.normative-overview { margin: 0 -1px; }.normative-overview .normative-viewport { overflow-x: auto; overflow-y: hidden; padding: 26px 0 20px; scrollbar-color: #9bc8c4 #eef4f5; scrollbar-width: thin; }.normative-overview .normative-track { position: relative; align-items: flex-start; gap: 0; min-width: 2840px; min-height: 170px; padding: 0 22px; transform: none !important; }.normative-overview .normative-track::before { content: ""; position: absolute; top: 82px; left: 22px; right: 22px; height: 3px; background: #173b60; }.normative-overview .normative-node { position: relative; display: flex; flex: 0 0 78px; flex-direction: column; align-items: center; min-height: 156px; padding: 0 4px; border-left: 1px solid transparent; opacity: .5; transition: opacity .2s ease; }.normative-overview .normative-node[data-phase=\"1\"], .normative-overview .normative-node[data-phase=\"2\"], .normative-overview .normative-node[data-phase=\"3\"], .normative-overview .normative-node[data-phase=\"4\"] { border-left-color: #cad9df; }.normative-overview .normative-node.active { opacity: 1; }.normative-node-icon { display: grid; place-items: center; width: 30px; height: 30px; margin-bottom: 37px; border: 1px solid #8ea8b9; border-radius: 50%; color: var(--percata-deep); background: white; font-size: 8px; font-weight: 900; }.normative-node.active .normative-node-icon { border-color: var(--percata-teal); color: white; background: var(--percata-teal); box-shadow: 0 0 0 5px #dff3ef; }.normative-node-dot { position: absolute; top: 75px; width: 17px; height: 17px; border: 3px solid #173b60; border-radius: 50%; background: white; }.normative-node.active .normative-node-dot { border-color: var(--percata-teal); background: #bfe8e3; box-shadow: 0 0 0 4px #e8f6f4; }.normative-node strong { width: 74px; color: var(--percata-deep); font-size: 9px; line-height: 1.15; text-align: center; }.normative-node small { width: 74px; margin-top: 4px; color: var(--percata-muted); font-size: 8px; text-align: center; }.normative-overview .normative-caption { min-height: 60px; }.normative-overview .normative-scroll-hint { text-align: center; }.normative-overview .normative-scroll-hint i { animation-name: scroll-hint-right; }
+
 .live-demo { max-width: 920px; margin: 32px 0; padding: 23px; border: 1px solid #cde2e2; border-radius: var(--radius-lg); background: linear-gradient(145deg, #f6fbfb, #eef5f7); box-shadow: var(--shadow); }
 .demo-header { display: flex; align-items: start; justify-content: space-between; gap: 18px; margin-bottom: 17px; }
 .demo-header h3 { margin: 3px 0 0; color: var(--percata-deep); font-size: 22px; }
@@ -168,6 +170,7 @@ main { min-width: 0; background: var(--paper); }
 @keyframes aggregate-pulse { 50% { transform: scale(1.045); background: var(--percata-teal); } }
 @keyframes cycle-in { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes scroll-hint { 0%, 100% { transform: translateY(0); opacity: .55; } 50% { transform: translateY(4px); opacity: 1; } }
+@keyframes scroll-hint-right { 0%, 100% { transform: translateX(0); opacity: .55; } 50% { transform: translateX(4px); opacity: 1; } }
 
 .callout { max-width: 880px; margin: 24px 0; padding: 18px 20px 18px 55px; border-radius: 0 var(--radius-md) var(--radius-md) 0; border-left: 5px solid var(--percata-teal); background: var(--percata-green); position: relative; }
 .callout-icon { position: absolute; left: 15px; top: 19px; display: grid; place-items: center; width: 25px; height: 25px; border-radius: 8px; color: var(--percata-teal); background: white; }.callout-icon svg { width: 16px; height: 16px; stroke: currentColor; }
@@ -228,7 +231,7 @@ tr:nth-child(even) td { background: var(--percata-surface); }
   .replay-controls { display: none; }
   .workflow-replay { box-shadow: none; }
   .normative-replay { break-inside: auto; page-break-inside: auto; }
-  .normative-story { height: auto; }.normative-sticky { position: static; display: block; min-height: 0; }.normative-scroll-hint { display: none; }.normative-viewport { overflow: visible; }.normative-track { display: grid; grid-template-columns: repeat(2, 1fr); width: auto; transform: none !important; padding: 12px; }.normative-card { opacity: 1; transform: none; break-inside: avoid; page-break-inside: avoid; }.normative-card::after { display: none; }.normative-caption { display: none; }.normative-stage-grid { display: block; }.normative-stage-list { display: none; }.normative-phase-rail { grid-template-columns: repeat(5, 1fr); }.normative-panel { min-height: 0; padding: 17px; }.normative-panel h4 { font-size: 20px; }.normative-meta { grid-template-columns: repeat(3, 1fr); }.normative-warning { break-inside: avoid; page-break-inside: avoid; }
+  .normative-scroll-hint { display: none; }.normative-overview .normative-viewport { overflow: visible; }.normative-overview .normative-track { display: grid; grid-template-columns: repeat(6, 1fr); min-width: 0; min-height: 0; padding: 12px; }.normative-overview .normative-track::before { display: none; }.normative-overview .normative-node { min-height: 95px; opacity: 1; border-left: 0; break-inside: avoid; page-break-inside: avoid; }.normative-overview .normative-node-icon { margin-bottom: 17px; }.normative-overview .normative-node-dot { top: 50px; }.normative-overview .normative-caption { display: none; }.normative-stage-grid { display: block; }.normative-stage-list { display: none; }.normative-phase-rail { grid-template-columns: repeat(5, 1fr); }.normative-panel { min-height: 0; padding: 17px; }.normative-panel h4 { font-size: 20px; }.normative-meta { grid-template-columns: repeat(3, 1fr); }.normative-warning { break-inside: avoid; page-break-inside: avoid; }
   .chapter-replay-next, .subsection-guide button { display: none; }
   .chapter-scene { display: block; margin-bottom: 5px; animation: none !important; opacity: 1 !important; transform: none !important; }
   .live-demo { break-inside: avoid; page-break-inside: avoid; box-shadow: none; }
@@ -334,7 +337,7 @@ tr:nth-child(even) td { background: var(--percata-surface); }
       <div class="replay-heading"><div><span class="section-label">MAPA NORMATIVO</span><h3>Planejar é uma cadeia de decisões</h3></div><span class="replay-source">36 MICROETAPAS GUIADAS</span></div>
       <p class="replay-intro">Avance etapa por etapa para visualizar como uma necessidade se transforma em planejamento, contratação, execução e aprendizado institucional. O mapa apresenta o percurso completo para explicar sua extensão; os atos concretos seguem as competências, normas internas e sistemas oficiais aplicáveis.</p>
       <div class="normative-scope"><span class="normative-scope-mark">PERCATA</span><span><strong>Onde o PERCATA atua:</strong> o PERCATA organiza a demanda por meio do registro, encaminhamento e acompanhamento. Ele não realiza a licitação, a contratação, o empenho nem a compra.</span></div>
-      <div class="normative-story" data-normative-story data-normative-scroll><div class="normative-sticky"><div class="normative-shell"><div class="normative-phase-rail" data-normative-phase-rail aria-label="Fases do ciclo completo"></div><div class="normative-viewport"><div class="normative-track" data-normative-track aria-live="polite"></div></div><div class="normative-caption" data-normative-caption></div></div><span class="normative-scroll-hint">Continue rolando para percorrer o processo <i>↓</i></span></div></div>
+      <div class="normative-overview" data-normative-overview><div class="normative-shell"><div class="normative-phase-rail" data-normative-phase-rail aria-label="Fases do ciclo completo"></div><div class="normative-viewport"><div class="normative-track" data-normative-track aria-live="polite"></div></div><div class="normative-caption" data-normative-caption></div></div><span class="normative-scroll-hint">Acompanhe o percurso completo <i>→</i></span></div>
       <aside class="normative-warning"><strong>Planejar não garante a compra.</strong> Uma demanda bem registrada torna a necessidade visível, analisável e possível de priorizar. A compra depende de disponibilidade orçamentária, decisões competentes e do procedimento aplicável.</aside>
     </section>
 <p>Planejar não significa registrar tudo o que seria desejável em uma situação ideal. Significa informar o que é necessário para a atividade, com quantidade, desempenho e características proporcionais ao uso previsto. Uma demanda bem planejada apresenta itens e <strong>especificações compatíveis com o uso previsto</strong>, com a realidade institucional e com a justificativa apresentada.</p>
@@ -1385,7 +1388,7 @@ tr:nth-child(even) td { background: var(--percata-surface); }
     const rail = demo.querySelector('[data-normative-phase-rail]');
     const track = demo.querySelector('[data-normative-track]');
     rail.innerHTML = normativePhases.map((phase, index) => `<span class="normative-phase" data-normative-phase="${index}"><b>${String(index + 1).padStart(2, '0')}</b>${phase}</span>`).join('');
-    track.innerHTML = normativePlanningStages.map((item, index) => `<article class="normative-card" data-normative-card="${index}" data-phase="${item.phase}"><span class="normative-card-number">${String(item.stage).padStart(2, '0')}</span><span class="normative-card-route">${item.route}</span><h4>${item.title}</h4><p>${item.summary}</p><div class="normative-card-footer"><b>${item.responsible}</b><span>${item.scope}</span></div></article>`).join('');
+    track.innerHTML = normativePlanningStages.map((item, index) => `<article class="normative-node" data-normative-card="${index}" data-phase="${item.phase}"><span class="normative-node-icon">${String(item.stage).padStart(2, '0')}</span><span class="normative-node-dot"></span><strong>${item.title}</strong><small>${item.route}</small></article>`).join('');
     updateNormativeReplay(demo, 0, 0);
   }
   function updateNormativeReplay(demo, stageIndex, progress) {
@@ -1394,9 +1397,6 @@ tr:nth-child(even) td { background: var(--percata-surface); }
     const caption = demo.querySelector('[data-normative-caption]');
     const cards = [...demo.querySelectorAll('[data-normative-card]')];
     const phases = [...demo.querySelectorAll('[data-normative-phase]')];
-    const viewport = demo.querySelector('.normative-viewport');
-    const maxTranslate = Math.max(0, track.scrollWidth - viewport.clientWidth);
-    track.style.transform = `translate3d(-${Math.round(maxTranslate * progress)}px, 0, 0)`;
     cards.forEach((card, index) => card.classList.toggle('active', index === stageIndex));
     phases.forEach((phase, index) => phase.classList.toggle('active', index === entry.phase));
     phases.forEach((phase, index) => phase.classList.toggle('done', index < entry.phase));
@@ -1406,20 +1406,25 @@ tr:nth-child(even) td { background: var(--percata-surface); }
   }
   document.querySelectorAll('[data-replay="normative"]').forEach((demo) => {
     renderNormativeReplay(demo);
-    const story = demo.querySelector('[data-normative-scroll]');
-    let scheduled = false;
-    const updateFromScroll = () => {
-      scheduled = false;
-      const rect = story.getBoundingClientRect();
-      const scrollable = Math.max(1, story.offsetHeight - window.innerHeight);
-      const progress = Math.min(1, Math.max(0, -rect.top / scrollable));
-      const stageIndex = Math.min(normativePlanningStages.length - 1, Math.floor(progress * normativePlanningStages.length));
-      updateNormativeReplay(demo, stageIndex, progress);
+    demo.setAttribute('data-normative-auto', 'pending');
+    const overview = demo.querySelector('[data-normative-overview]');
+    const playOverview = () => {
+      if (demo.getAttribute('data-normative-auto') === 'played') return;
+      demo.setAttribute('data-normative-auto', 'played');
+      let stageIndex = 0;
+      const timer = window.setInterval(() => {
+        updateNormativeReplay(demo, stageIndex, stageIndex / (normativePlanningStages.length - 1));
+        stageIndex += 1;
+        if (stageIndex >= normativePlanningStages.length) window.clearInterval(timer);
+      }, 75);
     };
-    const requestUpdate = () => { if (scheduled) return; scheduled = true; requestAnimationFrame(updateFromScroll); };
-    window.addEventListener('scroll', requestUpdate, { passive: true });
-    window.addEventListener('resize', requestUpdate);
-    requestUpdate();
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        playOverview();
+        observer.disconnect();
+      }
+    }, { threshold: .2 });
+    observer.observe(overview);
   });
 
   document.querySelectorAll('[data-chapter-replay]').forEach((guide) => {
