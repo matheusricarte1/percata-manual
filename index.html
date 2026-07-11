@@ -151,6 +151,12 @@ main { min-width: 0; background: var(--paper); }
 .normative-overview .normative-node strong { margin-top: 58px; }
 .normative-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; margin-bottom: 22px; }.normative-header h3 { margin: 4px 0 5px; color: var(--percata-deep); font-size: 29px; }.normative-header p { max-width: 620px; margin: 0; color: var(--percata-muted); font-size: 13px; }.normative-stats { display: flex; flex: 0 0 auto; align-items: center; gap: 18px; padding: 13px 17px; border-radius: 999px; background: #f3f8f8; }.normative-stats span { color: var(--percata-muted); font-size: 9px; line-height: 1.15; }.normative-stats strong { display: block; margin-top: 3px; color: var(--percata-teal); font-size: 19px; }.normative-timeline-row { display: grid; grid-template-columns: 45px minmax(0, 1fr) 45px; align-items: center; gap: 0; }.normative-nav { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid #d7e2e6; border-radius: 50%; color: var(--percata-deep); background: white; box-shadow: 0 5px 12px rgb(13 53 82 / 8%); cursor: pointer; font: 24px/1 var(--ui); }.normative-nav:hover { border-color: var(--percata-teal); color: white; background: var(--percata-teal); }.normative-nav:disabled { cursor: not-allowed; opacity: .35; }.normative-nav:focus-visible { outline: 3px solid #efb84a; outline-offset: 3px; }
 .normative-caption { position: relative; overflow: hidden; }.normative-timer { position: absolute; right: 0; bottom: 0; left: 0; display: block; height: 3px; background: var(--percata-teal); transform: scaleX(0); transform-origin: left center; }.normative-timer.is-running { animation: normative-countdown 4s linear both; }.normative-overview .normative-node.active .normative-node-dot { animation: normative-pulse 1.15s ease-in-out infinite; }
+
+.procurement-journey { width: min(1180px, calc(100vw - 310px)); margin: 30px 50% 38px; padding: 22px; border: 1px solid #d8e3e7; border-radius: 24px; color: var(--percata-ink); background: linear-gradient(145deg, #fff, #fbfcfd); box-shadow: 0 20px 45px rgb(13 53 82 / 9%); transform: translateX(-50%); }.journey-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 4px 10px 22px; }.journey-header h3 { margin: 4px 0 3px; color: var(--percata-deep); font-size: 29px; line-height: 1.08; letter-spacing: -.035em; }.journey-header p { margin: 0; color: var(--percata-muted); font-size: 13px; }.journey-metrics { display: flex; flex: 0 0 auto; align-items: stretch; padding: 12px 16px; border-radius: 999px; background: linear-gradient(120deg, #f3f8f8, #f7f9fb); }.journey-metrics > span:not(.journey-metric-icon) { min-width: 105px; padding: 0 16px; border-left: 1px solid #d7e2e6; color: var(--percata-muted); font-size: 10px; line-height: 1.15; }.journey-metrics > span:nth-child(2) { border-left: 0; }.journey-metrics strong { display: block; margin-top: 4px; color: var(--percata-teal); font-size: 21px; line-height: 1; }.journey-metric-icon { align-self: center; color: var(--percata-teal); font-size: 25px; font-weight: 900; }
+.journey-phases { display: flex; overflow: hidden; margin: 0 0 18px; border: 1px solid #c9e3df; border-radius: 14px; background: #f2faf9; }.journey-phase { position: relative; z-index: 1; display: grid; grid-template-columns: 32px 25px minmax(0, 1fr) 18px; align-items: center; gap: 8px; flex: 1 1 20%; min-width: 0; min-height: 78px; margin-left: -13px; padding: 12px 18px 12px 27px; color: var(--percata-deep); background: linear-gradient(105deg, #eff9f7, #f7fbfb); clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 18px 50%); }.journey-phase:first-child { margin-left: 0; padding-left: 20px; clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%); }.journey-phase.current { z-index: 2; color: white; background: linear-gradient(135deg, #0b8a83, #08736e); box-shadow: -8px 0 18px rgb(11 122 117 / 16%); }.journey-phase i { display: grid; place-items: center; color: currentColor; }.journey-phase svg { width: 27px; height: 27px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }.journey-phase b { color: var(--percata-teal); font-size: 11px; }.journey-phase.current b { color: #d5f5f2; }.journey-phase strong { min-width: 0; font-size: 11px; line-height: 1.22; }.journey-phase em { display: grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; color: white; background: var(--percata-teal); font-size: 9px; font-style: normal; }.journey-phase.future { opacity: .67; }
+.journey-stage { position: relative; display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; min-height: 276px; padding: 24px 12px 28px; border: 1px solid #dce6e9; border-radius: 18px; background: white; }.journey-window { min-width: 0; overflow: hidden; }.journey-track { position: relative; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); min-height: 190px; }.journey-track::before { content: ""; position: absolute; top: 69px; right: 3%; left: 3%; border-top: 2px dashed #9eb1bf; }.journey-arrow { z-index: 3; display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #d8e3e7; border-radius: 50%; color: var(--percata-deep); background: white; box-shadow: 0 7px 17px rgb(13 53 82 / 10%); cursor: pointer; font: 25px/1 var(--ui); }.journey-arrow:hover { border-color: var(--percata-teal); color: white; background: var(--percata-teal); }.journey-arrow:disabled { cursor: not-allowed; opacity: .3; }.journey-node { position: relative; z-index: 1; display: grid; grid-template-rows: 24px 45px auto auto; justify-items: center; min-width: 0; padding: 0 5px; text-align: center; }.journey-node > b { color: #607587; font-size: 11px; }.journey-node > span { display: grid; place-items: center; align-self: center; width: 23px; height: 23px; border: 2px solid #9fb1be; border-radius: 50%; color: white; background: white; font-size: 10px; font-weight: 900; }.journey-node.complete > span { border-color: var(--percata-teal); background: var(--percata-teal); }.journey-node.current > span { width: 34px; height: 34px; border: 4px solid white; background: var(--percata-teal); box-shadow: 0 0 0 3px var(--percata-teal), 0 0 0 11px rgb(11 122 117 / 12%); animation: normative-pulse 1.15s ease-in-out infinite; }.journey-node.complete::before, .journey-node.current::before { content: ""; position: absolute; z-index: -1; top: 68px; right: 50%; width: 100%; border-top: 3px solid var(--percata-teal); }.journey-node:first-child::before { display: none; }.journey-node strong { max-width: 105px; margin-top: 10px; color: var(--percata-deep); font-size: 10px; line-height: 1.3; }.journey-node.current strong { font-weight: 900; }.journey-node small { margin-top: 6px; color: var(--percata-muted); font-size: 8px; }.journey-timer { position: absolute; right: 0; bottom: 0; left: 0; height: 4px; border-radius: 0 0 18px 18px; background: var(--percata-teal); transform: scaleX(0); transform-origin: left; }.journey-timer.is-running { animation: normative-countdown 4s linear both; }
+.journey-detail { display: grid; grid-template-columns: 165px minmax(220px, 1.25fr) minmax(220px, 1fr) minmax(180px, .72fr); gap: 20px; margin: 18px 0 0; padding: 22px; border: 1px solid #dce6e9; border-radius: 18px; background: white; box-shadow: 0 10px 24px rgb(13 53 82 / 7%); }.journey-detail-meta { display: flex; flex-direction: column; justify-content: center; padding-right: 18px; border-right: 1px solid #dce6e9; }.journey-detail-icon { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 15px; border-radius: 50%; color: var(--percata-teal); background: #e9f6f4; }.journey-detail-icon svg { width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }.journey-detail-meta > b { color: var(--percata-teal); font-size: 10px; letter-spacing: .05em; }.journey-detail-meta > strong { margin-top: 13px; padding: 9px; border-radius: 8px; color: #156d67; background: #eaf6f4; font-size: 9px; line-height: 1.3; }.journey-detail-copy { align-self: center; }.journey-detail-copy h4 { margin: 0 0 11px; color: var(--percata-deep); font-size: 22px; line-height: 1.16; }.journey-detail-copy p { margin: 0 0 13px; color: var(--percata-muted); font-size: 12px; line-height: 1.52; }.journey-detail-copy small { color: var(--percata-deep); font-size: 9px; }.journey-actions, .journey-deliverables { padding: 16px; border-radius: 13px; background: linear-gradient(135deg, #eff9f7, #f7fbfb); }.journey-deliverables { background: linear-gradient(135deg, #f5f8fa, #fbfcfd); }.journey-actions > strong, .journey-deliverables > strong { display: block; margin-bottom: 12px; color: var(--percata-teal); font-size: 9px; letter-spacing: .07em; }.journey-actions [data-normative-actions] { display: grid; gap: 9px; }.journey-actions span { display: grid; grid-template-columns: 22px 1fr; align-items: center; gap: 8px; color: #435b68; font-size: 9px; line-height: 1.35; }.journey-actions span b { display: grid; place-items: center; width: 20px; height: 20px; border: 1px solid #77bdb7; border-radius: 50%; color: var(--percata-teal); font-size: 8px; }.journey-deliverables ul { margin: 0; padding-left: 17px; }.journey-deliverables li { margin-bottom: 7px; color: #566c7b; font-size: 9px; line-height: 1.35; }
+.journey-footer { display: flex; justify-content: space-between; gap: 20px; padding: 17px 10px 6px; color: var(--percata-muted); font-size: 9px; }.normative-legend { display: flex; flex-wrap: wrap; gap: 18px; }.normative-legend .is-complete { color: #0c7f77; }.normative-legend .is-current { color: var(--percata-teal); }.normative-legend .is-pending { color: #71889a; }.normative-legend .is-future { color: #9aaab5; }.journey-scope { display: flex; gap: 11px; align-items: center; margin: 14px 0 0; padding: 12px 14px; border-left: 4px solid var(--percata-teal); border-radius: 0 10px 10px 0; background: #eff9f8; }.journey-scope > span { flex: 0 0 auto; padding: 5px 7px; border-radius: 6px; color: white; background: var(--percata-teal); font-size: 8px; font-weight: 900; letter-spacing: .08em; }.journey-scope p { margin: 0; color: #385e5c; font-size: 10px; line-height: 1.4; }.procurement-journey .normative-warning { margin-bottom: 0; }
 .demo-header { display: flex; align-items: start; justify-content: space-between; gap: 18px; margin-bottom: 17px; }
 .demo-header h3 { margin: 3px 0 0; color: var(--percata-deep); font-size: 22px; }
 .demo-badge { flex: 0 0 auto; padding: 6px 9px; border-radius: 999px; color: var(--percata-teal); background: var(--percata-green); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
@@ -219,6 +225,8 @@ tr:nth-child(even) td { background: var(--percata-surface); }
 @media (max-width: 560px) { .cover h1 { font-size: 41px; }.flow-atlas, .profile-selector { padding: 20px; }.atlas-heading, .replay-heading, .profile-selector-heading { display: block; }.atlas-live, .replay-source { display: inline-block; margin-top: 7px; }.profile-choice-grid { grid-template-columns: 1fr; }.profile-choice-grid .profile-button { text-align: left; }.atlas-grid { grid-template-columns: 1fr 1fr; }.atlas-thumb { height: 78px; }.replay-rail, .replay-form, .replay-checklist, .chapter-replay, .collective-workflow .replay-rail, .collective-replay-key, .collective-source-shots, .collective-review-grid, .collective-loop, .collective-split, .normative-stage-grid, .normative-meta { grid-template-columns: 1fr; }.normative-phase-rail { grid-template-columns: 1fr 1fr; }.normative-phase { min-height: 42px; }.normative-story { height: 430vh; }.normative-sticky { top: 65px; min-height: 500px; }.normative-track { gap: 9px; padding: 0 16px; }.normative-card { flex-basis: min(270px, calc(100vw - 78px)); min-height: 224px; padding: 16px; }.normative-caption { display: block; min-height: 70px; }.normative-caption strong, .normative-caption em { display: block; margin: 4px 0 0; }.normative-stage-list { max-height: 250px; border-right: 0; border-bottom: 1px solid #e1eaed; }.normative-panel { padding: 20px; }.normative-panel h4 { font-size: 22px; }.chapter-replay-image { min-height: 120px; }.subsection-guide { grid-template-columns: 28px 1fr; }.subsection-guide button { grid-column: 2; justify-self: start; }.replay-source-shot { grid-template-columns: 1fr; }.replay-source-shot img { width: 100%; height: auto; }.collective-source-shots .replay-source-shot { grid-template-columns: 1fr; }.collective-source-shots .replay-source-shot img { width: 100%; height: auto; }.collective-room-card, .collective-ready { grid-template-columns: 1fr; }.collective-contributors { grid-template-columns: 1fr; }.collective-plus, .loop-arrow { transform: rotate(90deg); }.chapter::before { left: -12px; }.chapter-icon { width: 36px; height: 36px; }.process-trail { grid-template-columns: 1fr 1fr; }.decision-grid, .status-grid, .contribution-board { grid-template-columns: 1fr; }.status-card, .status-card:nth-child(2n) { border-right: 0; border-bottom: 1px solid var(--percata-line); }.status-card:last-child { border-bottom: 0; }.demo-header { display: block; }.demo-badge { display: inline-block; margin-top: 9px; } }
 
 @media (max-width: 560px) { .normative-header { display: block; }.normative-header h3 { font-size: 24px; }.normative-stats { justify-content: space-between; margin-top: 14px; border-radius: 12px; }.normative-stats strong { font-size: 16px; }.normative-timeline-row { grid-template-columns: 36px minmax(0, 1fr) 36px; }.normative-nav { width: 32px; height: 32px; }.normative-overview .normative-track { min-width: 2840px; }.normative-overview .normative-viewport { padding-bottom: 16px; } }
+@media (max-width: 1100px) { .procurement-journey { width: min(100%, calc(100vw - 48px)); }.journey-detail { grid-template-columns: 150px 1fr 1fr; }.journey-deliverables { grid-column: 2 / -1; }.journey-phase { grid-template-columns: 25px 22px minmax(0, 1fr); }.journey-phase em { display: none; }.journey-phase svg { width: 22px; height: 22px; } }
+@media (max-width: 760px) { .procurement-journey { width: 100%; margin: 24px 0 34px; padding: 16px; transform: none; }.journey-header { display: block; }.journey-header h3 { font-size: 25px; }.journey-metrics { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 15px; border-radius: 14px; }.journey-metric-icon { display: none; }.journey-metrics > span:not(.journey-metric-icon) { min-width: 0; padding: 0 8px; }.journey-phases { overflow-x: auto; }.journey-phase { flex: 0 0 190px; }.journey-stage { grid-template-columns: 36px minmax(0, 1fr) 36px; min-height: 250px; padding-right: 4px; padding-left: 4px; }.journey-track { grid-template-columns: repeat(3, minmax(0, 1fr)); }.journey-arrow { width: 32px; height: 32px; }.journey-detail { grid-template-columns: 1fr; gap: 14px; padding: 17px; }.journey-detail-meta { padding: 0 0 14px; border-right: 0; border-bottom: 1px solid #dce6e9; }.journey-detail-copy h4 { font-size: 20px; }.journey-deliverables { grid-column: auto; }.journey-footer { display: block; }.journey-footer > span { display: block; margin-top: 10px; }.journey-scope { align-items: flex-start; } }
 
 @page { size: A4; margin: 15mm 14mm 17mm; }
 @media print {
@@ -244,6 +252,7 @@ tr:nth-child(even) td { background: var(--percata-surface); }
   .normative-replay { break-inside: auto; page-break-inside: auto; }
   .normative-scroll-hint { display: none; }.normative-overview .normative-viewport { overflow: visible; }.normative-overview .normative-track { display: grid; grid-template-columns: repeat(6, 1fr); min-width: 0; min-height: 0; padding: 12px; }.normative-overview .normative-track::before { display: none; }.normative-overview .normative-node { min-height: 95px; opacity: 1; border-left: 0; break-inside: avoid; page-break-inside: avoid; }.normative-overview .normative-node-icon { margin-bottom: 17px; }.normative-overview .normative-node-dot { top: 50px; }.normative-overview .normative-caption { display: none; }.normative-stage-grid { display: block; }.normative-stage-list { display: none; }.normative-phase-rail { grid-template-columns: repeat(5, 1fr); }.normative-panel { min-height: 0; padding: 17px; }.normative-panel h4 { font-size: 20px; }.normative-meta { grid-template-columns: repeat(3, 1fr); }.normative-warning { break-inside: avoid; page-break-inside: avoid; }
   .normative-header { display: block; }.normative-stats { margin-top: 12px; border-radius: 12px; }.normative-timeline-row { display: block; }.normative-nav { display: none; }
+  .procurement-journey { width: auto; margin: 0; padding: 12px; break-inside: auto; transform: none; box-shadow: none; }.journey-header { display: block; }.journey-metrics { margin-top: 10px; }.journey-phases { break-inside: avoid; }.journey-stage { grid-template-columns: 1fr; min-height: 0; break-inside: avoid; }.journey-arrow, .journey-timer { display: none; }.journey-detail { grid-template-columns: 120px 1fr 1fr; break-inside: avoid; box-shadow: none; }.journey-deliverables { grid-column: 2 / -1; }.journey-footer { break-inside: avoid; }
   .chapter-replay-next, .subsection-guide button { display: none; }
   .chapter-scene { display: block; margin-bottom: 5px; animation: none !important; opacity: 1 !important; transform: none !important; }
   .live-demo { break-inside: avoid; page-break-inside: avoid; box-shadow: none; }
@@ -345,12 +354,14 @@ tr:nth-child(even) td { background: var(--percata-surface); }
       <span class="subsection-guide-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"></path></svg></span><div><span class="section-label">MICROGUIA · Painel Unificado</span><strong>Planejamento realista e responsável</strong><p data-subsection-text>Use o painel para se orientar no ciclo e nos recados disponíveis.</p></div><button type="button" data-subsection-next aria-label="Ver próxima orientação para Planejamento realista e responsável">Próxima orientação</button>
       <template data-subsection-scenes>Use o painel para se orientar no ciclo e nos recados disponíveis.||Relacione a informação do capítulo à sua necessidade atual.||Abra a tela indicada e siga a próxima ação apresentada pelo sistema.</template>
     </aside>
-<section class="workflow-replay normative-replay" data-replay="normative" data-stage="0" aria-label="Mapa animado do ciclo de planejamento e contratação">
-      <div class="normative-header"><div><span class="section-label">JORNADA DA CONTRATAÇÃO PÚBLICA</span><h3>Acompanhe todas as etapas do processo</h3><p>Do registro da necessidade à avaliação do resultado, cada etapa exige análise, decisão e documentação.</p></div><div class="normative-stats"><span>PROGRESSO GERAL<strong data-normative-progress>0%</strong></span><span>ETAPA ATUAL<strong data-normative-current>1 de 36</strong></span><span>FASE ATUAL<strong data-normative-phase-current>1 de 5</strong></span></div></div>
-      <p class="replay-intro">Avance etapa por etapa para visualizar como uma necessidade se transforma em planejamento, contratação, execução e aprendizado institucional. O mapa apresenta o percurso completo para explicar sua extensão; os atos concretos seguem as competências, normas internas e sistemas oficiais aplicáveis.</p>
-      <div class="normative-scope"><span class="normative-scope-mark">PERCATA</span><span><strong>Onde o PERCATA atua:</strong> o PERCATA organiza a demanda por meio do registro, encaminhamento e acompanhamento. Ele não realiza a licitação, a contratação, o empenho nem a compra.</span></div>
-      <div class="normative-overview" data-normative-overview><div class="normative-shell"><div class="normative-phase-rail" data-normative-phase-rail aria-label="Fases do ciclo completo"></div><div class="normative-timeline-row"><button class="normative-nav" type="button" data-normative-prev aria-label="Voltar uma etapa">‹</button><div class="normative-viewport"><div class="normative-track" data-normative-track aria-live="polite"></div></div><button class="normative-nav" type="button" data-normative-next aria-label="Avançar uma etapa">›</button></div><div class="normative-caption" data-normative-caption><span class="normative-timer" data-normative-timer></span></div></div><span class="normative-scroll-hint">Acompanhe o percurso completo <i>→</i></span></div>
-      <aside class="normative-warning"><strong>Planejar não garante a compra.</strong> Uma demanda bem registrada torna a necessidade visível, analisável e possível de priorizar. A compra depende de disponibilidade orçamentária, decisões competentes e do procedimento aplicável.</aside>
+<section class="procurement-journey normative-replay" data-replay="normative" data-normative-overview data-stage="0" aria-label="Jornada completa da contratação pública">
+      <header class="journey-header"><div><span class="section-label">MAPA NORMATIVO INTERATIVO</span><h3>Jornada da Contratação Pública</h3><p>Acompanhe todas as etapas do processo, da necessidade ao aprendizado institucional.</p></div><div class="journey-metrics"><span class="journey-metric-icon" aria-hidden="true">↗</span><span>Progresso geral<strong data-normative-progress>0%</strong></span><span>Etapa atual<strong data-normative-current>1 de 36</strong></span><span>Fase atual<strong data-normative-phase-current>1 de 5</strong></span></div></header>
+      <div class="journey-phases" data-normative-phase-rail aria-label="Fases da contratação pública"></div>
+      <div class="journey-stage"><button class="journey-arrow" type="button" data-normative-prev aria-label="Voltar uma etapa">‹</button><div class="journey-window"><div class="journey-track" data-normative-track aria-live="polite"></div></div><button class="journey-arrow" type="button" data-normative-next aria-label="Avançar uma etapa">›</button><span class="journey-timer" data-normative-timer aria-label="Tempo restante da etapa"></span></div>
+      <article class="journey-detail" data-normative-detail aria-live="polite"><aside class="journey-detail-meta" data-normative-detail-meta></aside><div class="journey-detail-copy" data-normative-detail-copy></div><section class="journey-actions"><strong>O QUE FAZER NESTA ETAPA</strong><div data-normative-actions></div></section><section class="journey-deliverables"><strong>ENTREGÁVEIS</strong><ul data-normative-deliverables></ul></section></article>
+      <footer class="journey-footer"><div class="normative-legend"><span class="is-complete">✓ Concluída</span><span class="is-current">● Atual</span><span class="is-pending">○ Pendente</span><span class="is-future">◌ Futura</span></div><span>Use as setas para explorar o processo. Cada etapa permanece ativa por 4 segundos.</span></footer>
+      <div class="journey-scope"><span>PERCATA</span><p><strong>Onde o sistema atua:</strong> o PERCATA organiza a demanda por meio do registro, encaminhamento e acompanhamento. Licitação, contratação, empenho e execução seguem os sistemas e as competências oficiais.</p></div>
+      <aside class="normative-warning"><strong>Planejar não garante a compra.</strong> A demanda torna-se visível e passível de priorização, mas sua execução depende de disponibilidade orçamentária, decisão competente e procedimento próprio.</aside>
     </section>
 <p>Planejar não significa registrar tudo o que seria desejável em uma situação ideal. Significa informar o que é necessário para a atividade, com quantidade, desempenho e características proporcionais ao uso previsto. Uma demanda bem planejada apresenta itens e <strong>especificações compatíveis com o uso previsto</strong>, com a realidade institucional e com a justificativa apresentada.</p>
 <p>Ao estimar uma necessidade, explique o problema que será resolvido, o público ou a atividade atendida, a quantidade necessária e a razão técnica da escolha. Pedidos com características excessivas, sem relação demonstrada com a finalidade ou sem base de cálculo dificultam a priorização e reduzem a qualidade do planejamento coletivo.</p>
@@ -1396,86 +1407,96 @@ tr:nth-child(even) td { background: var(--percata-surface); }
   ];
 
   const normativePhases = ['Demanda e DFD', 'Validação e consolidação', 'PCA e orçamento', 'Preparação da contratação', 'Contratação, execução e retorno'];
+  const normativePhaseTags = ['FORMALIZAÇÃO DA NECESSIDADE', 'ANÁLISE E CONSOLIDAÇÃO', 'PLANEJAMENTO INSTITUCIONAL', 'INSTRUÇÃO DA CONTRATAÇÃO', 'EXECUÇÃO E APRENDIZADO'];
   const normativeShortLabels = ['Necessidade', 'Resultado esperado', 'Soluções disponíveis', 'Forma de participação', 'Catálogo', 'Quantidade anual', 'Prazo e prioridade', 'Dependências', 'Proporcionalidade', 'Encaminhamento', 'Análise da chefia', 'Ajustes', 'Reenvio', 'Homologação', 'Sala coletiva', 'Natureza da despesa', 'Área técnica', 'Agrupamento', 'Estimativa', 'Calendário', 'Orçamento', 'Priorização', 'Proposta PCA', 'Aprovação', 'Publicação', 'Revisão PCA', 'Aderência', 'Processo', 'ETP', 'Riscos', 'Preços e requisitos', 'TR / Projeto Básico', 'Autorizações', 'Seleção / contratação', 'Execução', 'Avaliação'];
-  function renderNormativeReplay(demo) {
-    const rail = demo.querySelector('[data-normative-phase-rail]');
-    const track = demo.querySelector('[data-normative-track]');
-    rail.innerHTML = normativePhases.map((phase, index) => `<span class="normative-phase" data-normative-phase="${index}"><b>${String(index + 1).padStart(2, '0')}</b>${phase}</span>`).join('');
-    track.innerHTML = normativePlanningStages.map((item, index) => `<article class="normative-node" data-normative-card="${index}" data-phase="${item.phase}" tabindex="0" aria-label="Etapa ${item.stage}: ${item.title}"><span class="normative-node-icon">${String(item.stage).padStart(2, '0')}</span><span class="normative-node-dot"></span><strong>${normativeShortLabels[index]}</strong><small>${item.route}</small></article>`).join('');
-    updateNormativeReplay(demo, 0, 0);
-  }
-  function updateNormativeReplay(demo, stageIndex, progress) {
+  const normativePhaseActions = [
+    ['Descrever a necessidade com base no uso real', 'Informar quantidade, prazo, prioridade e dependências', 'Registrar justificativas e evidências no PERCATA'],
+    ['Conferir coerência, finalidade e proporcionalidade', 'Orientar ajustes sem cancelar a demanda', 'Registrar a decisão e o encaminhamento'],
+    ['Consolidar demandas semelhantes e estimativas', 'Compatibilizar prioridades, calendário e orçamento', 'Submeter o PCA às decisões competentes'],
+    ['Definir a solução e aprofundar os estudos técnicos', 'Mapear riscos, preços, requisitos e responsabilidades', 'Produzir os documentos da fase preparatória'],
+    ['Selecionar e formalizar a contratação aplicável', 'Acompanhar entrega, fiscalização e pagamento', 'Avaliar resultados e alimentar o próximo ciclo']
+  ];
+  const normativePhaseDeliverables = [
+    ['DFD ou contribuição coletiva', 'Memória de cálculo', 'Justificativas e evidências'],
+    ['Registro de análise', 'Orientação de ajuste ou homologação', 'Consolidação da demanda'],
+    ['Consolidação institucional', 'Decisão de priorização', 'PCA aprovado ou revisado'],
+    ['ETP e mapa de riscos', 'Pesquisa de preços', 'Termo de Referência ou Projeto Básico'],
+    ['Edital, contrato ou instrumento equivalente', 'Registros de execução e fiscalização', 'Avaliação e lições aprendidas']
+  ];
+  const phaseIcons = [
+    '<svg viewBox="0 0 24 24"><path d="M7 4h10v16H7zM9 4V2h6v2M10 9h4M10 13h4"/></svg>',
+    '<svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20v-3a5 5 0 0 1 10 0v3M13 20v-3a5 5 0 0 1 8-4"/></svg>',
+    '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/></svg>',
+    '<svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h5M9 12h6M9 16h6"/></svg>',
+    '<svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2M20 4v5h-5M4 20v-5h5"/></svg>'
+  ];
+
+  function renderJourney(demo, stageIndex) {
     const entry = normativePlanningStages[stageIndex];
-    const track = demo.querySelector('[data-normative-track]');
-    const caption = demo.querySelector('[data-normative-caption]');
-    const cards = [...demo.querySelectorAll('[data-normative-card]')];
-    const phases = [...demo.querySelectorAll('[data-normative-phase]')];
-    const viewport = demo.querySelector('.normative-viewport');
-    const progressLabel = demo.querySelector('[data-normative-progress]');
-    const currentLabel = demo.querySelector('[data-normative-current]');
-    const activeNode = cards[stageIndex];
-    if (activeNode && progress > 0) {
-      const target = activeNode.offsetLeft - (viewport.clientWidth / 2) + (activeNode.offsetWidth / 2);
-      viewport.scrollTo({ left: Math.max(0, Math.min(target, track.scrollWidth - viewport.clientWidth)), behavior: 'smooth' });
-    }
-    cards.forEach((card, index) => card.classList.toggle('active', index === stageIndex));
-    phases.forEach((phase, index) => phase.classList.toggle('active', index === entry.phase));
-    phases.forEach((phase, index) => phase.classList.toggle('done', index < entry.phase));
-    caption.innerHTML = `<span>ETAPA ${String(entry.stage).padStart(2, '0')} · ${entry.route.toUpperCase()}</span><strong>${entry.title}</strong><em>${entry.responsible} · ${entry.document}</em><i class="normative-timer" data-normative-timer aria-label="Tempo desta etapa"></i>`;
-    const timerBar = caption.querySelector('[data-normative-timer]');
-    requestAnimationFrame(() => timerBar.classList.add('is-running'));
-    progressLabel.textContent = `${Math.round(progress * 100)}%`;
-    currentLabel.textContent = `${entry.stage} de ${normativePlanningStages.length}`;
+    const progress = (stageIndex + 1) / normativePlanningStages.length;
+    const phaseRail = demo.querySelector('[data-normative-phase-rail]');
+    const visibleCount = window.matchMedia('(max-width: 700px)').matches ? 3 : 9;
+    const start = Math.max(0, Math.min(stageIndex - Math.floor(visibleCount / 2), normativePlanningStages.length - visibleCount));
+    const visibleStages = normativePlanningStages.slice(start, start + visibleCount);
+    phaseRail.innerHTML = normativePhases.map((phase, index) => `<span class="journey-phase ${index < entry.phase ? 'complete' : index === entry.phase ? 'current' : 'future'}"><i>${phaseIcons[index]}</i><b>${String(index + 1).padStart(2, '0')}</b><strong>${phase}</strong><em>${index < entry.phase ? '✓' : ''}</em></span>`).join('');
+    demo.querySelector('[data-normative-track]').innerHTML = visibleStages.map((item, localIndex) => {
+      const globalIndex = start + localIndex;
+      const state = globalIndex < stageIndex ? 'complete' : globalIndex === stageIndex ? 'current' : globalIndex === stageIndex + 1 ? 'pending' : 'future';
+      return `<article class="journey-node ${state}"><b>${item.stage}</b><span>${state === 'complete' ? '✓' : ''}</span><strong>${normativeShortLabels[globalIndex]}</strong><small>${item.route}</small></article>`;
+    }).join('');
+    demo.querySelector('[data-normative-detail-meta]').innerHTML = `<span class="journey-detail-icon">${phaseIcons[entry.phase]}</span><b>ETAPA ${entry.stage} DE ${normativePlanningStages.length}</b><strong>${normativePhaseTags[entry.phase]}</strong>`;
+    demo.querySelector('[data-normative-detail-copy]').innerHTML = `<h4>${entry.title}</h4><p>${entry.summary}</p><small><b>Responsável:</b> ${entry.responsible}</small>`;
+    demo.querySelector('[data-normative-actions]').innerHTML = normativePhaseActions[entry.phase].map((action, index) => `<span><b>${index + 1}</b>${action}</span>`).join('');
+    const deliverables = [entry.document, ...normativePhaseDeliverables[entry.phase].filter((item) => item !== entry.document)].slice(0, 4);
+    demo.querySelector('[data-normative-deliverables]').innerHTML = deliverables.map((item) => `<li>${item}</li>`).join('');
+    demo.querySelector('[data-normative-progress]').textContent = `${Math.round(progress * 100)}%`;
+    demo.querySelector('[data-normative-current]').textContent = `${entry.stage} de ${normativePlanningStages.length}`;
     demo.querySelector('[data-normative-phase-current]').textContent = `${entry.phase + 1} de ${normativePhases.length}`;
+    demo.querySelector('[data-normative-prev]').disabled = stageIndex === 0;
+    demo.querySelector('[data-normative-next]').disabled = stageIndex === normativePlanningStages.length - 1;
+    const timerBar = demo.querySelector('[data-normative-timer]');
+    timerBar.classList.remove('is-running');
+    void timerBar.offsetWidth;
+    timerBar.classList.add('is-running');
     demo.dataset.stage = String(stageIndex);
     demo.dataset.progress = String(progress);
   }
+
   document.querySelectorAll('[data-replay="normative"]').forEach((demo) => {
-    renderNormativeReplay(demo);
-    demo.setAttribute('data-normative-auto', 'pending');
-    const overview = demo.querySelector('[data-normative-overview]');
-    const viewport = demo.querySelector('.normative-viewport');
-    const previous = demo.querySelector('[data-normative-prev]');
-    const next = demo.querySelector('[data-normative-next]');
+    let currentStage = 0;
     let timer = null;
-    const stopOverview = () => {
-      if (timer) window.clearInterval(timer);
-      timer = null;
-      demo.setAttribute('data-normative-auto', 'paused-by-user');
-    };
-    ['pointerdown', 'wheel', 'touchstart', 'keydown'].forEach((eventName) => viewport.addEventListener(eventName, stopOverview, { passive: eventName !== 'keydown' }));
-    const playOverview = () => {
-      if (demo.getAttribute('data-normative-auto') !== 'pending') return;
-      demo.setAttribute('data-normative-auto', 'played');
-      let stageIndex = 0;
-      timer = window.setInterval(() => {
-        updateNormativeReplay(demo, stageIndex, stageIndex / (normativePlanningStages.length - 1));
-        stageIndex += 1;
-        if (stageIndex >= normativePlanningStages.length) {
-          window.clearInterval(timer);
-          timer = null;
-        }
+    let visible = false;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const stopTimer = () => { if (timer) window.clearTimeout(timer); timer = null; };
+    const schedule = () => {
+      stopTimer();
+      if (!visible || reducedMotion || currentStage >= normativePlanningStages.length - 1) return;
+      timer = window.setTimeout(() => {
+        currentStage += 1;
+        renderJourney(demo, currentStage);
+        schedule();
       }, 4000);
     };
-    const observer = new IntersectionObserver((entries) => {
-      if (entries.some((entry) => entry.isIntersecting)) {
-        playOverview();
-        observer.disconnect();
-      }
-    }, { threshold: .2 });
-    observer.observe(overview);
-    const manualNavigate = (delta) => {
-      if (timer) window.clearInterval(timer);
-      timer = null;
-      demo.setAttribute('data-normative-auto', 'manual');
-      const current = Number(demo.dataset.stage || 0);
-      const nextStage = Math.max(0, Math.min(normativePlanningStages.length - 1, current + delta));
-      updateNormativeReplay(demo, nextStage, nextStage / (normativePlanningStages.length - 1));
-      previous.disabled = nextStage === 0;
-      next.disabled = nextStage === normativePlanningStages.length - 1;
+    const navigate = (delta) => {
+      currentStage = Math.max(0, Math.min(normativePlanningStages.length - 1, currentStage + delta));
+      renderJourney(demo, currentStage);
+      schedule();
     };
-    previous.addEventListener('click', () => manualNavigate(-1));
-    next.addEventListener('click', () => manualNavigate(1));
+    renderJourney(demo, currentStage);
+    demo.setAttribute('data-normative-auto', 'ready');
+    demo.querySelector('[data-normative-prev]').addEventListener('click', () => navigate(-1));
+    demo.querySelector('[data-normative-next]').addEventListener('click', () => navigate(1));
+    demo.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') navigate(-1);
+      if (event.key === 'ArrowRight') navigate(1);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      visible = entries.some((entry) => entry.isIntersecting);
+      demo.setAttribute('data-normative-auto', visible ? 'playing' : 'paused');
+      if (visible) schedule(); else stopTimer();
+    }, { threshold: .2 });
+    observer.observe(demo);
+    window.addEventListener('resize', () => renderJourney(demo, currentStage));
   });
 
   document.querySelectorAll('[data-chapter-replay]').forEach((guide) => {
