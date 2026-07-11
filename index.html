@@ -149,6 +149,7 @@ main { min-width: 0; background: var(--paper); }
 .normative-overview .normative-node-icon { margin-bottom: 0; }
 .normative-overview .normative-node-dot { top: 70px; }
 .normative-overview .normative-node strong { margin-top: 58px; }
+.normative-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; margin-bottom: 22px; }.normative-header h3 { margin: 4px 0 5px; color: var(--percata-deep); font-size: 29px; }.normative-header p { max-width: 620px; margin: 0; color: var(--percata-muted); font-size: 13px; }.normative-stats { display: flex; flex: 0 0 auto; align-items: center; gap: 18px; padding: 13px 17px; border-radius: 999px; background: #f3f8f8; }.normative-stats span { color: var(--percata-muted); font-size: 9px; line-height: 1.15; }.normative-stats strong { display: block; margin-top: 3px; color: var(--percata-teal); font-size: 19px; }.normative-timeline-row { display: grid; grid-template-columns: 45px minmax(0, 1fr) 45px; align-items: center; gap: 0; }.normative-nav { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid #d7e2e6; border-radius: 50%; color: var(--percata-deep); background: white; box-shadow: 0 5px 12px rgb(13 53 82 / 8%); cursor: pointer; font: 24px/1 var(--ui); }.normative-nav:hover { border-color: var(--percata-teal); color: white; background: var(--percata-teal); }.normative-nav:disabled { cursor: not-allowed; opacity: .35; }.normative-nav:focus-visible { outline: 3px solid #efb84a; outline-offset: 3px; }
 .demo-header { display: flex; align-items: start; justify-content: space-between; gap: 18px; margin-bottom: 17px; }
 .demo-header h3 { margin: 3px 0 0; color: var(--percata-deep); font-size: 22px; }
 .demo-badge { flex: 0 0 auto; padding: 6px 9px; border-radius: 999px; color: var(--percata-teal); background: var(--percata-green); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
@@ -214,6 +215,8 @@ tr:nth-child(even) td { background: var(--percata-surface); }
 @media (max-width: 900px) { .shell { display: block; }.toc { display: none; }.manual { padding: 38px 24px 70px; }.site-header { padding: 11px 24px; }.header-note { display: none; }.cover { min-height: auto; }.cover-logo { margin-bottom: 35px; }.route-grid { grid-template-columns: 1fr; }.profile-choice-grid { grid-template-columns: repeat(2, 1fr); }.atlas-grid { grid-template-columns: repeat(2, 1fr); }.atlas-preview { grid-template-columns: 1fr; }.cycle { grid-template-columns: 1fr 1fr; }.cycle-step:nth-child(2) { border-right: 0; }.cycle-step { border-bottom: 1px solid var(--percata-line); }.cycle-step:nth-last-child(-n+2) { border-bottom: 0; } }
 @media (max-width: 560px) { .cover h1 { font-size: 41px; }.flow-atlas, .profile-selector { padding: 20px; }.atlas-heading, .replay-heading, .profile-selector-heading { display: block; }.atlas-live, .replay-source { display: inline-block; margin-top: 7px; }.profile-choice-grid { grid-template-columns: 1fr; }.profile-choice-grid .profile-button { text-align: left; }.atlas-grid { grid-template-columns: 1fr 1fr; }.atlas-thumb { height: 78px; }.replay-rail, .replay-form, .replay-checklist, .chapter-replay, .collective-workflow .replay-rail, .collective-replay-key, .collective-source-shots, .collective-review-grid, .collective-loop, .collective-split, .normative-stage-grid, .normative-meta { grid-template-columns: 1fr; }.normative-phase-rail { grid-template-columns: 1fr 1fr; }.normative-phase { min-height: 42px; }.normative-story { height: 430vh; }.normative-sticky { top: 65px; min-height: 500px; }.normative-track { gap: 9px; padding: 0 16px; }.normative-card { flex-basis: min(270px, calc(100vw - 78px)); min-height: 224px; padding: 16px; }.normative-caption { display: block; min-height: 70px; }.normative-caption strong, .normative-caption em { display: block; margin: 4px 0 0; }.normative-stage-list { max-height: 250px; border-right: 0; border-bottom: 1px solid #e1eaed; }.normative-panel { padding: 20px; }.normative-panel h4 { font-size: 22px; }.chapter-replay-image { min-height: 120px; }.subsection-guide { grid-template-columns: 28px 1fr; }.subsection-guide button { grid-column: 2; justify-self: start; }.replay-source-shot { grid-template-columns: 1fr; }.replay-source-shot img { width: 100%; height: auto; }.collective-source-shots .replay-source-shot { grid-template-columns: 1fr; }.collective-source-shots .replay-source-shot img { width: 100%; height: auto; }.collective-room-card, .collective-ready { grid-template-columns: 1fr; }.collective-contributors { grid-template-columns: 1fr; }.collective-plus, .loop-arrow { transform: rotate(90deg); }.chapter::before { left: -12px; }.chapter-icon { width: 36px; height: 36px; }.process-trail { grid-template-columns: 1fr 1fr; }.decision-grid, .status-grid, .contribution-board { grid-template-columns: 1fr; }.status-card, .status-card:nth-child(2n) { border-right: 0; border-bottom: 1px solid var(--percata-line); }.status-card:last-child { border-bottom: 0; }.demo-header { display: block; }.demo-badge { display: inline-block; margin-top: 9px; } }
 
+@media (max-width: 560px) { .normative-header { display: block; }.normative-header h3 { font-size: 24px; }.normative-stats { justify-content: space-between; margin-top: 14px; border-radius: 12px; }.normative-stats strong { font-size: 16px; }.normative-timeline-row { grid-template-columns: 36px minmax(0, 1fr) 36px; }.normative-nav { width: 32px; height: 32px; }.normative-overview .normative-track { min-width: 2840px; }.normative-overview .normative-viewport { padding-bottom: 16px; } }
+
 @page { size: A4; margin: 15mm 14mm 17mm; }
 @media print {
   html, body { background: white; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
@@ -237,6 +240,7 @@ tr:nth-child(even) td { background: var(--percata-surface); }
   .workflow-replay { box-shadow: none; }
   .normative-replay { break-inside: auto; page-break-inside: auto; }
   .normative-scroll-hint { display: none; }.normative-overview .normative-viewport { overflow: visible; }.normative-overview .normative-track { display: grid; grid-template-columns: repeat(6, 1fr); min-width: 0; min-height: 0; padding: 12px; }.normative-overview .normative-track::before { display: none; }.normative-overview .normative-node { min-height: 95px; opacity: 1; border-left: 0; break-inside: avoid; page-break-inside: avoid; }.normative-overview .normative-node-icon { margin-bottom: 17px; }.normative-overview .normative-node-dot { top: 50px; }.normative-overview .normative-caption { display: none; }.normative-stage-grid { display: block; }.normative-stage-list { display: none; }.normative-phase-rail { grid-template-columns: repeat(5, 1fr); }.normative-panel { min-height: 0; padding: 17px; }.normative-panel h4 { font-size: 20px; }.normative-meta { grid-template-columns: repeat(3, 1fr); }.normative-warning { break-inside: avoid; page-break-inside: avoid; }
+  .normative-header { display: block; }.normative-stats { margin-top: 12px; border-radius: 12px; }.normative-timeline-row { display: block; }.normative-nav { display: none; }
   .chapter-replay-next, .subsection-guide button { display: none; }
   .chapter-scene { display: block; margin-bottom: 5px; animation: none !important; opacity: 1 !important; transform: none !important; }
   .live-demo { break-inside: avoid; page-break-inside: avoid; box-shadow: none; }
@@ -339,10 +343,10 @@ tr:nth-child(even) td { background: var(--percata-surface); }
       <template data-subsection-scenes>Use o painel para se orientar no ciclo e nos recados disponíveis.||Relacione a informação do capítulo à sua necessidade atual.||Abra a tela indicada e siga a próxima ação apresentada pelo sistema.</template>
     </aside>
 <section class="workflow-replay normative-replay" data-replay="normative" data-stage="0" aria-label="Mapa animado do ciclo de planejamento e contratação">
-      <div class="replay-heading"><div><span class="section-label">MAPA NORMATIVO</span><h3>Planejar é uma cadeia de decisões</h3></div><span class="replay-source">36 MICROETAPAS GUIADAS</span></div>
+      <div class="normative-header"><div><span class="section-label">JORNADA DA CONTRATAÇÃO PÚBLICA</span><h3>Acompanhe todas as etapas do processo</h3><p>Do registro da necessidade à avaliação do resultado, cada etapa exige análise, decisão e documentação.</p></div><div class="normative-stats"><span>PROGRESSO GERAL<strong data-normative-progress>0%</strong></span><span>ETAPA ATUAL<strong data-normative-current>1 de 36</strong></span><span>FASE ATUAL<strong data-normative-phase-current>1 de 5</strong></span></div></div>
       <p class="replay-intro">Avance etapa por etapa para visualizar como uma necessidade se transforma em planejamento, contratação, execução e aprendizado institucional. O mapa apresenta o percurso completo para explicar sua extensão; os atos concretos seguem as competências, normas internas e sistemas oficiais aplicáveis.</p>
       <div class="normative-scope"><span class="normative-scope-mark">PERCATA</span><span><strong>Onde o PERCATA atua:</strong> o PERCATA organiza a demanda por meio do registro, encaminhamento e acompanhamento. Ele não realiza a licitação, a contratação, o empenho nem a compra.</span></div>
-      <div class="normative-overview" data-normative-overview><div class="normative-shell"><div class="normative-phase-rail" data-normative-phase-rail aria-label="Fases do ciclo completo"></div><div class="normative-viewport"><div class="normative-track" data-normative-track aria-live="polite"></div></div><div class="normative-caption" data-normative-caption></div></div><span class="normative-scroll-hint">Acompanhe o percurso completo <i>→</i></span></div>
+      <div class="normative-overview" data-normative-overview><div class="normative-shell"><div class="normative-phase-rail" data-normative-phase-rail aria-label="Fases do ciclo completo"></div><div class="normative-timeline-row"><button class="normative-nav" type="button" data-normative-prev aria-label="Voltar uma etapa">‹</button><div class="normative-viewport"><div class="normative-track" data-normative-track aria-live="polite"></div></div><button class="normative-nav" type="button" data-normative-next aria-label="Avançar uma etapa">›</button></div><div class="normative-caption" data-normative-caption></div></div><span class="normative-scroll-hint">Acompanhe o percurso completo <i>→</i></span></div>
       <aside class="normative-warning"><strong>Planejar não garante a compra.</strong> Uma demanda bem registrada torna a necessidade visível, analisável e possível de priorizar. A compra depende de disponibilidade orçamentária, decisões competentes e do procedimento aplicável.</aside>
     </section>
 <p>Planejar não significa registrar tudo o que seria desejável em uma situação ideal. Significa informar o que é necessário para a atividade, com quantidade, desempenho e características proporcionais ao uso previsto. Uma demanda bem planejada apresenta itens e <strong>especificações compatíveis com o uso previsto</strong>, com a realidade institucional e com a justificativa apresentada.</p>
@@ -1404,6 +1408,8 @@ tr:nth-child(even) td { background: var(--percata-surface); }
     const cards = [...demo.querySelectorAll('[data-normative-card]')];
     const phases = [...demo.querySelectorAll('[data-normative-phase]')];
     const viewport = demo.querySelector('.normative-viewport');
+    const progressLabel = demo.querySelector('[data-normative-progress]');
+    const currentLabel = demo.querySelector('[data-normative-current]');
     const activeNode = cards[stageIndex];
     if (activeNode && progress > 0) {
       const target = activeNode.offsetLeft - (viewport.clientWidth / 2) + (activeNode.offsetWidth / 2);
@@ -1413,6 +1419,9 @@ tr:nth-child(even) td { background: var(--percata-surface); }
     phases.forEach((phase, index) => phase.classList.toggle('active', index === entry.phase));
     phases.forEach((phase, index) => phase.classList.toggle('done', index < entry.phase));
     caption.innerHTML = `<span>ETAPA ${String(entry.stage).padStart(2, '0')} · ${entry.route.toUpperCase()}</span><strong>${entry.title}</strong><em>${entry.responsible} · ${entry.document}</em>`;
+    progressLabel.textContent = `${Math.round(progress * 100)}%`;
+    currentLabel.textContent = `${entry.stage} de ${normativePlanningStages.length}`;
+    demo.querySelector('[data-normative-phase-current]').textContent = `${entry.phase + 1} de ${normativePhases.length}`;
     demo.dataset.stage = String(stageIndex);
     demo.dataset.progress = String(progress);
   }
@@ -1421,6 +1430,8 @@ tr:nth-child(even) td { background: var(--percata-surface); }
     demo.setAttribute('data-normative-auto', 'pending');
     const overview = demo.querySelector('[data-normative-overview]');
     const viewport = demo.querySelector('.normative-viewport');
+    const previous = demo.querySelector('[data-normative-prev]');
+    const next = demo.querySelector('[data-normative-next]');
     let timer = null;
     const stopOverview = () => {
       if (timer) window.clearInterval(timer);
@@ -1439,7 +1450,7 @@ tr:nth-child(even) td { background: var(--percata-surface); }
           window.clearInterval(timer);
           timer = null;
         }
-      }, 320);
+      }, 4000);
     };
     const observer = new IntersectionObserver((entries) => {
       if (entries.some((entry) => entry.isIntersecting)) {
@@ -1448,6 +1459,18 @@ tr:nth-child(even) td { background: var(--percata-surface); }
       }
     }, { threshold: .2 });
     observer.observe(overview);
+    const manualNavigate = (delta) => {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+      demo.setAttribute('data-normative-auto', 'manual');
+      const current = Number(demo.dataset.stage || 0);
+      const nextStage = Math.max(0, Math.min(normativePlanningStages.length - 1, current + delta));
+      updateNormativeReplay(demo, nextStage, nextStage / (normativePlanningStages.length - 1));
+      previous.disabled = nextStage === 0;
+      next.disabled = nextStage === normativePlanningStages.length - 1;
+    };
+    previous.addEventListener('click', () => manualNavigate(-1));
+    next.addEventListener('click', () => manualNavigate(1));
   });
 
   document.querySelectorAll('[data-chapter-replay]').forEach((guide) => {
