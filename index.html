@@ -144,6 +144,11 @@ main { min-width: 0; background: var(--paper); }
 .normative-overview { margin: 0 -1px; }.normative-overview .normative-viewport { overflow-x: auto; overflow-y: hidden; padding: 26px 0 20px; scrollbar-color: #9bc8c4 #eef4f5; scrollbar-width: thin; }.normative-overview .normative-track { position: relative; align-items: flex-start; gap: 0; min-width: 2840px; min-height: 170px; padding: 0 22px; transform: none !important; }.normative-overview .normative-track::before { content: ""; position: absolute; top: 82px; left: 22px; right: 22px; height: 3px; background: #173b60; }.normative-overview .normative-node { position: relative; display: flex; flex: 0 0 78px; flex-direction: column; align-items: center; min-height: 156px; padding: 0 4px; border-left: 1px solid transparent; opacity: .5; transition: opacity .2s ease; }.normative-overview .normative-node[data-phase=\"1\"], .normative-overview .normative-node[data-phase=\"2\"], .normative-overview .normative-node[data-phase=\"3\"], .normative-overview .normative-node[data-phase=\"4\"] { border-left-color: #cad9df; }.normative-overview .normative-node.active { opacity: 1; }.normative-node-icon { display: grid; place-items: center; width: 30px; height: 30px; margin-bottom: 37px; border: 1px solid #8ea8b9; border-radius: 50%; color: var(--percata-deep); background: white; font-size: 8px; font-weight: 900; }.normative-node.active .normative-node-icon { border-color: var(--percata-teal); color: white; background: var(--percata-teal); box-shadow: 0 0 0 5px #dff3ef; }.normative-node-dot { position: absolute; top: 75px; width: 17px; height: 17px; border: 3px solid #173b60; border-radius: 50%; background: white; }.normative-node.active .normative-node-dot { border-color: var(--percata-teal); background: #bfe8e3; box-shadow: 0 0 0 4px #e8f6f4; }.normative-node strong { width: 74px; color: var(--percata-deep); font-size: 9px; line-height: 1.15; text-align: center; }.normative-node small { width: 74px; margin-top: 4px; color: var(--percata-muted); font-size: 8px; text-align: center; }.normative-overview .normative-caption { min-height: 60px; }.normative-overview .normative-scroll-hint { text-align: center; }.normative-overview .normative-scroll-hint i { animation-name: scroll-hint-right; }
 
 .live-demo { max-width: 920px; margin: 32px 0; padding: 23px; border: 1px solid #cde2e2; border-radius: var(--radius-lg); background: linear-gradient(145deg, #f6fbfb, #eef5f7); box-shadow: var(--shadow); }
+.normative-overview .normative-track { min-height: 194px; }
+.normative-overview .normative-node { min-height: 182px; transition: opacity .35s ease; }
+.normative-overview .normative-node-icon { margin-bottom: 0; }
+.normative-overview .normative-node-dot { top: 70px; }
+.normative-overview .normative-node strong { margin-top: 58px; }
 .demo-header { display: flex; align-items: start; justify-content: space-between; gap: 18px; margin-bottom: 17px; }
 .demo-header h3 { margin: 3px 0 0; color: var(--percata-deep); font-size: 22px; }
 .demo-badge { flex: 0 0 auto; padding: 6px 9px; border-radius: 999px; color: var(--percata-teal); background: var(--percata-green); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
@@ -1384,11 +1389,12 @@ tr:nth-child(even) td { background: var(--percata-surface); }
   ];
 
   const normativePhases = ['Demanda e DFD', 'Validação e consolidação', 'PCA e orçamento', 'Preparação da contratação', 'Contratação, execução e retorno'];
+  const normativeShortLabels = ['Necessidade', 'Resultado esperado', 'Soluções disponíveis', 'Forma de participação', 'Catálogo', 'Quantidade anual', 'Prazo e prioridade', 'Dependências', 'Proporcionalidade', 'Encaminhamento', 'Análise da chefia', 'Ajustes', 'Reenvio', 'Homologação', 'Sala coletiva', 'Natureza da despesa', 'Área técnica', 'Agrupamento', 'Estimativa', 'Calendário', 'Orçamento', 'Priorização', 'Proposta PCA', 'Aprovação', 'Publicação', 'Revisão PCA', 'Aderência', 'Processo', 'ETP', 'Riscos', 'Preços e requisitos', 'TR / Projeto Básico', 'Autorizações', 'Seleção / contratação', 'Execução', 'Avaliação'];
   function renderNormativeReplay(demo) {
     const rail = demo.querySelector('[data-normative-phase-rail]');
     const track = demo.querySelector('[data-normative-track]');
     rail.innerHTML = normativePhases.map((phase, index) => `<span class="normative-phase" data-normative-phase="${index}"><b>${String(index + 1).padStart(2, '0')}</b>${phase}</span>`).join('');
-    track.innerHTML = normativePlanningStages.map((item, index) => `<article class="normative-node" data-normative-card="${index}" data-phase="${item.phase}"><span class="normative-node-icon">${String(item.stage).padStart(2, '0')}</span><span class="normative-node-dot"></span><strong>${item.title}</strong><small>${item.route}</small></article>`).join('');
+    track.innerHTML = normativePlanningStages.map((item, index) => `<article class="normative-node" data-normative-card="${index}" data-phase="${item.phase}" tabindex="0" aria-label="Etapa ${item.stage}: ${item.title}"><span class="normative-node-icon">${String(item.stage).padStart(2, '0')}</span><span class="normative-node-dot"></span><strong>${normativeShortLabels[index]}</strong><small>${item.route}</small></article>`).join('');
     updateNormativeReplay(demo, 0, 0);
   }
   function updateNormativeReplay(demo, stageIndex, progress) {
@@ -1397,6 +1403,12 @@ tr:nth-child(even) td { background: var(--percata-surface); }
     const caption = demo.querySelector('[data-normative-caption]');
     const cards = [...demo.querySelectorAll('[data-normative-card]')];
     const phases = [...demo.querySelectorAll('[data-normative-phase]')];
+    const viewport = demo.querySelector('.normative-viewport');
+    const activeNode = cards[stageIndex];
+    if (activeNode && progress > 0) {
+      const target = activeNode.offsetLeft - (viewport.clientWidth / 2) + (activeNode.offsetWidth / 2);
+      viewport.scrollTo({ left: Math.max(0, Math.min(target, track.scrollWidth - viewport.clientWidth)), behavior: 'smooth' });
+    }
     cards.forEach((card, index) => card.classList.toggle('active', index === stageIndex));
     phases.forEach((phase, index) => phase.classList.toggle('active', index === entry.phase));
     phases.forEach((phase, index) => phase.classList.toggle('done', index < entry.phase));
@@ -1408,15 +1420,26 @@ tr:nth-child(even) td { background: var(--percata-surface); }
     renderNormativeReplay(demo);
     demo.setAttribute('data-normative-auto', 'pending');
     const overview = demo.querySelector('[data-normative-overview]');
+    const viewport = demo.querySelector('.normative-viewport');
+    let timer = null;
+    const stopOverview = () => {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+      demo.setAttribute('data-normative-auto', 'paused-by-user');
+    };
+    ['pointerdown', 'wheel', 'touchstart', 'keydown'].forEach((eventName) => viewport.addEventListener(eventName, stopOverview, { passive: eventName !== 'keydown' }));
     const playOverview = () => {
-      if (demo.getAttribute('data-normative-auto') === 'played') return;
+      if (demo.getAttribute('data-normative-auto') !== 'pending') return;
       demo.setAttribute('data-normative-auto', 'played');
       let stageIndex = 0;
-      const timer = window.setInterval(() => {
+      timer = window.setInterval(() => {
         updateNormativeReplay(demo, stageIndex, stageIndex / (normativePlanningStages.length - 1));
         stageIndex += 1;
-        if (stageIndex >= normativePlanningStages.length) window.clearInterval(timer);
-      }, 75);
+        if (stageIndex >= normativePlanningStages.length) {
+          window.clearInterval(timer);
+          timer = null;
+        }
+      }, 320);
     };
     const observer = new IntersectionObserver((entries) => {
       if (entries.some((entry) => entry.isIntersecting)) {
