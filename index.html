@@ -35,7 +35,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #efb84a; outline-offs
 
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px max(24px, calc((100vw - 1380px) / 2)); border-bottom: 1px solid rgb(217 226 231 / 75%); background: rgb(255 255 255 / 93%); backdrop-filter: blur(14px); }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--percata-deep); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-decoration: none; }
-.brand img { display: block; width: 108px; height: auto; }
+.brand img { display: block; width: 140px; height: auto; object-fit: contain; }
 .header-note { color: var(--percata-muted); font-size: 13px; }
 
 .shell { display: grid; grid-template-columns: 248px minmax(0, 1fr); max-width: 1380px; margin: 0 auto; }
@@ -55,7 +55,7 @@ main { min-width: 0; background: var(--paper); }
 .cover { position: relative; min-height: min(780px, calc(100vh - 60px)); display: grid; align-content: center; overflow: hidden; padding: 30px 0 78px; }
 .cover::before { content: ""; position: absolute; z-index: 0; width: 620px; height: 620px; right: -350px; bottom: -230px; border: 1px solid #87c4c0; border-radius: 50%; box-shadow: 0 0 0 42px rgb(135 196 192 / 14%), 0 0 0 85px rgb(135 196 192 / 8%); }
 .cover > * { position: relative; z-index: 1; }
-.cover-logo { width: 230px; margin: 0 0 55px; }
+.cover-logo { width: min(100%, 320px); height: auto; margin: 0 0 55px; object-fit: contain; }
 .cover h1 { max-width: 850px; margin: 12px 0 17px; color: var(--percata-deep); font: 780 clamp(42px, 5.2vw, 70px)/1.04 var(--display); letter-spacing: -.055em; }
 .cover .subtitle { max-width: 660px; margin: 0; color: var(--percata-blue); font-size: clamp(18px, 2vw, 23px); line-height: 1.35; }
 .central-message { max-width: 790px; margin: 44px 0 25px; padding: 22px 24px; border-left: 5px solid var(--percata-teal); background: var(--percata-sand); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 17px; }
@@ -294,7 +294,7 @@ p, li, figcaption { text-wrap: pretty; }
 [data-expandable-image] { cursor: zoom-in; outline: 0; }
 [data-expandable-image]:focus-visible { border-radius: 10px; box-shadow: 0 0 0 4px rgb(11 122 117 / 28%); }
 .image-lightbox { width: min(96vw, 1500px); max-width: none; height: min(94vh, 980px); max-height: none; padding: 0; overflow: hidden; border: 1px solid rgb(255 255 255 / 18%); border-radius: 22px; color: white; background: #071c2d; box-shadow: 0 30px 100px rgb(0 0 0 / 46%); overscroll-behavior: contain; }
-.image-lightbox::backdrop { background: rgb(3 16 27 / 78%); backdrop-filter: blur(8px); }
+.image-lightbox::backdrop { background: rgb(3 16 27 / 88%); backdrop-filter: blur(8px); }
 .lightbox-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; padding: 14px 18px 14px 24px; border-bottom: 1px solid rgb(255 255 255 / 12%); background: linear-gradient(90deg, #0d3552, #0b6666); }
 .lightbox-bar strong { display: block; margin-top: 3px; font: 750 18px/1.2 var(--display); }
 .lightbox-bar .section-label { color: #a8dcd8; }
@@ -306,6 +306,16 @@ p, li, figcaption { text-wrap: pretty; }
 .image-lightbox > p { min-height: 56px; margin: 0; padding: 13px 24px; color: rgb(255 255 255 / 72%); background: #071c2d; font-size: 12px; text-align: center; }
 .journey-metrics, .journey-node-number { font-variant-numeric: tabular-nums; }
 button, [role="button"] { touch-action: manipulation; }
+
+/* Screenshots must remain evidential: previews show the whole captured interface. */
+.atlas-thumb { display: grid; place-items: center; background: #edf3f4; }
+.atlas-thumb img { object-fit: contain; object-position: center; }
+.atlas-card:hover .atlas-thumb img { transform: scale(1.03); }
+.atlas-preview figure { position: relative; display: grid; min-height: 320px; place-items: center; overflow: hidden; border-radius: 10px; background: linear-gradient(135deg, #eef4f5, #f8fafb); }
+.atlas-preview figure img { width: 100%; height: auto; max-height: 620px; aspect-ratio: auto; object-fit: contain; object-position: center; }
+.atlas-preview figure::after { content: "Clique para ampliar"; position: absolute; right: 12px; bottom: 38px; padding: 8px 11px; border: 1px solid rgb(255 255 255 / 32%); border-radius: 999px; color: white; background: rgb(13 53 82 / 92%); box-shadow: 0 8px 24px rgb(13 53 82 / 22%); pointer-events: none; font-size: 10px; font-weight: 800; letter-spacing: .025em; }
+.replay-source-shot img, .collective-source-shots .replay-source-shot img { object-fit: contain; object-position: center; background: white; }
+.chapter-replay-image img { object-fit: contain; object-position: center; background: white; }
 
 @media (max-width: 760px) {
   .institutional-brand { display: none; }
